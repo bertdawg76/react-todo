@@ -6,9 +6,9 @@ module.exports = function (config) {
     singleRun: true,
     frameworks: ['mocha'],
     files: [
-      'app/tests/**/*.test.jsx',
       'node_modules/jquery/dist/jquery.min.js',
-      'node_modules/foundation-sites/dist/foundation.min.js'
+      'node_modules/foundation-sites/dist/foundation.min.js',
+      'app/tests/**/*.test.jsx'
     ],
     preprocessors: {
       'app/tests/**/*.test.jsx': ['webpack', 'sourcemap']
@@ -16,7 +16,7 @@ module.exports = function (config) {
     reporters: ['mocha'],
     client: {
       mocha: {
-        timeout: '20000'
+        timeout: '5000'
       }
     },
     webpack: webpackConfig,
